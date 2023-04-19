@@ -5,7 +5,14 @@ using namespace std;
 #define INF (int)1e9
 
 void solve() {
-
+  int a, b, c, k, arr[10] = {};
+  cin >> a >> b >> c;
+  k = a*b*c;
+  while(k) {
+    arr[k % 10]++;
+    k /= 10;
+  }
+  for (int i = 0 ; i < 10; i++) cout << arr[i] << endl;
 }
 
 int main() {

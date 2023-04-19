@@ -3,5 +3,12 @@
     {
       "path": "."
     }
-  ]
+  ],
+  "settings": {
+    "files.associations": {
+      ".env": "dotenv",
+      "iostream": "cpp",
+      "cstdlib": "cpp"
+    }
+  }
 }

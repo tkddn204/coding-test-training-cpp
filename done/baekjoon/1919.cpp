@@ -5,7 +5,17 @@ using namespace std;
 #define INF (int)1e9
 
 void solve() {
+  int r = 0, arrA[26] = {}, arrB[26] = {};
+  string a, b;
+  cin >> a >> b;
 
+  for (char c: a) ++arrA[c - 'a'];
+  for (char c: b) ++arrB[c - 'a'];
+  
+  for (int i = 0 ; i < 26; ++i)
+    r += abs(arrA[i] - arrB[i]);
+
+  cout << r;
 }
 
 int main() {
