@@ -1,3 +1,0 @@
-# Pending dir
-
-title

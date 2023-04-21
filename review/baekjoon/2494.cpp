@@ -4,7 +4,16 @@ using namespace std;
 #define endl "\n"
 
 void solve() {
-    
+  stack<pair<int, int>> s;
+  int n, e;
+  cin >> n;
+  s.push({0, 1000000001});
+  for (int i = 1; i <= n; i++) {
+    cin >> e;
+    while (s.top().second < e) s.pop();
+    cout << s.top().first << " ";
+    s.push({i, e});
+  }
 }
 
 int main() {
