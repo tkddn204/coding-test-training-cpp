@@ -23,6 +23,29 @@ int k;
   for (int i = 0 ; i < k; i++) cout << ans[i] << " ";
 }
 
+void solveStack() {
+  stack<int> s;
+  int n;
+  cin >> n;
+  for (int i = 0 ; i < n; i++) cin >> arr[i];
+
+  for (int i = n - 1; i >= 0; i--) {
+    while (!s.empty() && arr[i] >= s.top()) {
+      s.pop();
+    }
+    if (!s.empty()) {
+      ans[i] = s.top();
+    } else {
+      ans[i] = -1;
+    }
+    s.push(arr[i]);
+  }
+
+  for (int i = 0; i < n; i++) {
+    cout << ans[i] << " ";
+  }
+}
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(0);
