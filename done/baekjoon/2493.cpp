@@ -2,8 +2,13 @@
 using namespace std;
 
 #define endl "\n"
+#define x first
+#define y second
 
-void solve() {
+int a[500001];
+stack<pair<int, int>> st;
+
+void solve1() {
   stack<pair<int, int>> s;
   int n, e;
   cin >> n;
@@ -15,6 +20,21 @@ void solve() {
     s.push({i, e});
   }
 }
+
+void solve2() {
+  int n;
+  cin >> n;
+  for (int i = 0 ; i < n; i++) cin >> a[i];
+
+  for (int i = 0 ; i < n ; i++) {
+    while (!st.empty() && st.top().y < a[i]) st.pop();
+
+    if (!st.empty()) cout << st.top().x + 1 << " ";
+    else cout << "0 ";
+    
+    st.push({i, a[i]});
+  }
+} 
 
 int main() {
   ios_base::sync_with_stdio(false);
