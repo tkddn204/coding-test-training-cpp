@@ -6,4 +6,4 @@ output.txt
 workbook
 
 .DS_store
-main.dSYM/**
+*.dSYM/**
