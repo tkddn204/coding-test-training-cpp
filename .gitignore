@@ -8,3 +8,6 @@ workbook
 
 .DS_store
 *.dSYM/**
+
+# CMAKE
+build/**
