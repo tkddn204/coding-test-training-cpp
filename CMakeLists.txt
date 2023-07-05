@@ -1,12 +1,15 @@
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.12.0)
 project(coding-test-training-cpp VERSION 0.1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(PROGRAM_NAME main)
 
+if(NOT EXISTS ${CMAKE_SOURCE_DIR}/main.cpp)
+  configure_file(${CMAKE_SOURCE_DIR}/template.cpp ${CMAKE_SOURCE_DIR}/main.cpp COPYONLY)
+endif()
+
 # main.cpp 빌드
 add_executable(${PROGRAM_NAME} ${CMAKE_SOURCE_DIR}/main.cpp)
-
 
 # main.cpp 파일을 생성하는 custom_target을 추가합니다.
 add_custom_target(init
