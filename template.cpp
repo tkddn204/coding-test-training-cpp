@@ -1,19 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#ifdef ONLINE_JUDGE
-constexpr bool ndebug = true;
-#else
-constexpr bool ndebug = false;
-#endif
-
 #define endl "\n"
-#define dbgl(x) \
-    if constexpr (!ndebug) cout << #x << endl
-#define dbg(x) \
-    if constexpr (!ndebug) cout << x
-#define dbge(x, e) \
-    if constexpr (!ndebug) cout << x << e
 
 void solve() {
   
